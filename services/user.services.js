@@ -35,6 +35,19 @@ class UserService {
       throw excep;
     }
   };
+  
+  changePassword = async (data) => {
+    try {
+      // let user_obj = new UserModel(data);
+      // return await user_obj.save();
+    } catch (excep) {
+      if (excep.code === 11000) {
+        // let keys = Object.keys(excep.keyPattern);
+        // throw keys.join(", ") + " should be unique";
+      }
+      throw excep;
+    }
+  };
 
   getUserByEmail = async (data) => {
     try {

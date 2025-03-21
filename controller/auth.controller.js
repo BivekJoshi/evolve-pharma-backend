@@ -88,6 +88,20 @@ class AuthController {
     // }
   };
 
+  changePassword = async (req, res, next) => {
+    console.log("🚀 ~ AuthController ~ changePassword= ~ req:", req.body);
+    try {
+      let data = req.body;
+
+      console.log("🚀 ~ AuthController ~ changePassword= ~ data:", data);
+    } catch (exep) {
+      next({
+        status: 400,
+        msg: JSON.stringify(exep),
+      });
+    }
+};
+
   getLoggedInUser = (req, res, next) => {
     res.json({
       result: req.auth_user,
